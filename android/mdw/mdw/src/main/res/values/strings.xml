@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">MDW</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_app_env">Select App Env</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="action_exit">Logout</string>
+
+    <string name="title_prefs_central">MDW Central</string>
+    <string name="title_prefs_central_url">URL</string>
+    <string name="message_prefs_central_url">MDW Central\u0027ts Base URL</string>
+
+    <string name="mobile">Mobile</string>
+    <string name="title_activity_web_view">WebViewActivity</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_placeholder">Not Found</string>
+
+    <string name="title_activity_login">Sign In</string>
+    <string name="title_activity_app_list">App Environments</string>
+
+    <string name="action_login">Log In</string>
+    <string name="action_signup">Sign Up</string>
+    <string name="prompt_username">Username</string>
+    <string name="prompt_password">Password</string>
+    <string name="link_signup">Sign up on MDW Central</string>
+
+
+</resources>

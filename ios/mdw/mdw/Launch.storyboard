@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Launch View Controller-->
+        <scene sceneID="cwK-jI-hy0">
+            <objects>
+                <viewController storyboardIdentifier="splash" id="p29-Iu-Iv0" userLabel="Launch View Controller" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UN9-wY-0jf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k6h-cE-WM4" userLabel="Centering View">
+                                <rect key="frame" x="115" y="148" width="144" height="96"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XIL-Gx-fQ7" userLabel="Logo Image">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="96"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="bd5-vb-SCb"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aya-ug-XAa" userLabel="Loading Image">
+                                        <rect key="frame" x="80" y="0.0" width="48" height="48"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="XIL-Gx-fQ7" firstAttribute="leading" secondItem="k6h-cE-WM4" secondAttribute="leading" id="LJs-0e-Xey"/>
+                                    <constraint firstAttribute="trailing" secondItem="aya-ug-XAa" secondAttribute="trailing" id="Mfg-Nc-mDA"/>
+                                    <constraint firstAttribute="width" constant="144" id="PtE-VU-nvA"/>
+                                    <constraint firstItem="aya-ug-XAa" firstAttribute="leading" secondItem="XIL-Gx-fQ7" secondAttribute="trailing" constant="16" id="QwU-U1-we4"/>
+                                    <constraint firstAttribute="height" constant="96" id="VNh-rI-dvG"/>
+                                    <constraint firstAttribute="bottom" secondItem="XIL-Gx-fQ7" secondAttribute="bottom" id="Ynq-7i-TVd"/>
+                                    <constraint firstAttribute="bottom" secondItem="aya-ug-XAa" secondAttribute="bottom" id="dnf-7p-rp6"/>
+                                    <constraint firstItem="XIL-Gx-fQ7" firstAttribute="top" secondItem="k6h-cE-WM4" secondAttribute="top" id="e1a-gP-j1R"/>
+                                    <constraint firstItem="aya-ug-XAa" firstAttribute="top" secondItem="k6h-cE-WM4" secondAttribute="top" id="uT6-u7-ztc"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © 2018 CenturyLink, Inc." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nj6-Tb-aov">
+                                <rect key="frame" x="87.5" y="260" width="200" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="k6h-cE-WM4" firstAttribute="centerX" secondItem="UN9-wY-0jf" secondAttribute="centerX" id="1pg-NA-G4C"/>
+                            <constraint firstItem="k6h-cE-WM4" firstAttribute="top" secondItem="R3V-o6-d2L" secondAttribute="top" constant="128" id="5iv-8l-TcW"/>
+                            <constraint firstItem="nj6-Tb-aov" firstAttribute="centerX" secondItem="UN9-wY-0jf" secondAttribute="centerX" id="d5o-QL-VJy"/>
+                            <constraint firstItem="nj6-Tb-aov" firstAttribute="top" secondItem="k6h-cE-WM4" secondAttribute="bottom" constant="16" id="fc2-ru-Lkd" userLabel="Copyright © 2018 CenturyLink, Inc..top = Centering View.bottom + 2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="R3V-o6-d2L"/>
+                    </view>
+                    <connections>
+                        <outlet property="loadingImage" destination="aya-ug-XAa" id="caf-tq-VkI"/>
+                        <outlet property="logoImage" destination="XIL-Gx-fQ7" id="vWZ-Kr-qHI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5u1-fr-f6j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2836" y="-300"/>
+        </scene>
+    </scenes>
+</document>

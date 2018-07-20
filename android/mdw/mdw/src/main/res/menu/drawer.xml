@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/nav_main"
+        android:checkableBehavior="single"
+        android:orderInCategory="1">
+        <item
+            android:id="@+id/nav_placeholder"
+            android:title="@string/title_placeholder" />
+    </group>
+
+    <item
+        android:id="@+id/nav_docs"
+        android:title="Documentation"
+        android:orderInCategory="2">
+        <menu>
+            <item
+                android:id="@+id/docs_help"
+                android:icon="@drawable/help"
+                android:title="Help" />
+            <item
+                android:id="@+id/docs_site"
+                android:icon="@drawable/site"
+                android:title="MDW Site" />
+        </menu>
+    </item>
+
+</menu>

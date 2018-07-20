@@ -1,0 +1,29 @@
+PODS:
+  - DrawerController (4.0.0):
+    - DrawerController/Core (= 4.0.0)
+    - DrawerController/DrawerVisualStates (= 4.0.0)
+  - DrawerController/Core (4.0.0)
+  - DrawerController/DrawerVisualStates (4.0.0):
+    - DrawerController/Core
+  - DynamicBlurView (2.0.2)
+  - PopupDialog (0.7.1):
+    - DynamicBlurView (~> 2.0)
+
+DEPENDENCIES:
+  - DrawerController (~> 4.0)
+  - PopupDialog (~> 0.7)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - DrawerController
+    - DynamicBlurView
+    - PopupDialog
+
+SPEC CHECKSUMS:
+  DrawerController: eb1168e9f7185cc49f654ae8486917f0acb3dc88
+  DynamicBlurView: aa6db4defc6e537eb86fc5e58dd3991666178399
+  PopupDialog: 39598b7d41719f5c025b4b70e62728bae7734fef
+
+PODFILE CHECKSUM: 502bf77d4520400ff16563075e985303b44e867b
+
+COCOAPODS: 1.5.3

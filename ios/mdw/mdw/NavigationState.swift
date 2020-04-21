@@ -35,7 +35,7 @@ class NavigationState {
     }
     
     func url(path: String) -> String {
-        return baseUrl! + "/" + path
+        return baseUrl! + "/" + path; // + "?mdwMobile=true"
     }
     
     func load(_ callback: @escaping (Error?) -> Void) {
@@ -127,7 +127,7 @@ class NavDrawerItem: Codable {
     let icon: String
     let url: String
     let condition: String?
-    let routes: [String]
+    let routes: [String]? = []
     let navs: [Nav]
 }
 class Nav: Codable {

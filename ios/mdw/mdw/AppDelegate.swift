@@ -33,10 +33,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NavigationState.instance.load { error -> Void in
             if let err = error {
                 logError(err)
-                self.window?.rootViewController = storyBoard.instantiateViewController(withIdentifier: "login")
+                //DispatchQueue.main.sync {
+                    self.window?.rootViewController = storyBoard.instantiateViewController(withIdentifier: "login")
+                //}
             }
             else {
-                self.window?.rootViewController = storyBoard.instantiateViewController(withIdentifier: "entry")
+                //DispatchQueue.main.sync {
+                    self.window?.rootViewController = storyBoard.instantiateViewController(withIdentifier: "entry")
+                //}
             }
         }
         return true

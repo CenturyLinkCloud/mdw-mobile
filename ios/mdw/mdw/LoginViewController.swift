@@ -202,15 +202,18 @@ class LoginViewController: UIViewController, UITextFieldDelegate, AppListDelegat
                 guard httpResponse.statusCode == 200 else {
                     throw ApiError.notOk(statusCode: httpResponse.statusCode, response: String(data: data!, encoding: .utf8))
                 }
-                var json = try JSONSerialization.jsonObject(with: data!) as! Dictionary<String,AnyObject>
+                let json = try JSONSerialization.jsonObject(with: data!) as! Dictionary<String,AnyObject>
                 let userToken = json["mdwauth"] as! String
                 Settings.instance.setToken(userToken, forAppId: env.appId)
                 let storyBoard = UIStoryboard(name: "Main", bundle:nil)
                 NavigationState.instance.load { error -> Void in
                     if let err = error {
                         self.password = nil
-                        self.passwordTextField.text = nil
-                        self.showToast(message: err.localizedDescription)
+                        logError(err);
+                        DispatchQueue.main.sync {
+                            self.passwordTextField.text = nil
+                            self.showToast(message: err.localizedDescription)
+                        }
                     }
                     else {
                         self.present(storyBoard.instantiateViewController(withIdentifier: "entry"), animated: true)
